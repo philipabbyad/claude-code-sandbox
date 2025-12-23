@@ -30,3 +30,12 @@
 |--------|-----|
 | `\` + `Enter` | Backslash at end of line, then Enter |
 | `Ctrl+J` | Insert line feed |
+
+## Command Prefixes
+
+| Prefix | Action | Example |
+|--------|--------|---------|
+| `/` | Execute slash command | `/help`, `/cost`, `/clear` |
+| `!` | Execute shell command (output added to context) | `!git status` |
+| `@` | File path autocomplete | `@src/Hello.java` |
+| `#` | Add to memory (CLAUDE.md) | `#` |
