@@ -1,6 +1,8 @@
 import java.time.LocalTime;
 
 public class TimeGreeter {
+    private static final String FALLBACK_GREETING = "Welcome";
+
     private Greeter greeter;
 
     public TimeGreeter(Greeter greeter) {
@@ -9,7 +11,8 @@ public class TimeGreeter {
 
     public String greet() {
         String timeOfDay = getTimeOfDay();
-        return "Good " + timeOfDay + "! " + greeter.greet();
+        String baseGreeting = (greeter != null) ? greeter.greet() : FALLBACK_GREETING;
+        return "Good " + timeOfDay + "! " + baseGreeting;
     }
 
     private String getTimeOfDay() {
