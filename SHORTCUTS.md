@@ -40,6 +40,25 @@
 | `@` | File path autocomplete | `@src/Hello.java` |
 | `#` | Add to memory (CLAUDE.md) | `#` |
 
+## Project Memory (CLAUDE.md)
+
+Memory files store context that persists across sessions.
+
+| Location | Scope |
+|----------|-------|
+| `.claude/CLAUDE.md` (in repo) | This project only |
+| `~/.claude/CLAUDE.md` (home dir) | All your projects |
+
+**How to add:**
+- Type `#` then your note — Claude prompts for file choice
+- Use `/memory` to edit directly
+- Edit `.claude/CLAUDE.md` manually
+
+**What to include:**
+- Project stack and structure
+- Coding preferences and conventions
+- Architecture notes
+
 ## Best Practices
 
 ### Session Management
