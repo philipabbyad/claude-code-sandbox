@@ -39,3 +39,39 @@
 | `!` | Execute shell command (output added to context) | `!git status` |
 | `@` | File path autocomplete | `@src/Hello.java` |
 | `#` | Add to memory (CLAUDE.md) | `#` |
+
+## Best Practices
+
+### Session Management
+
+| Practice | Why |
+|----------|-----|
+| Use `--resume` to continue work | Preserves full context |
+| Use `/compact` on long sessions | Reduces token usage |
+| Check `/cost` periodically | Awareness of usage |
+
+### Efficiency
+
+| Practice | Why |
+|----------|-----|
+| `Ctrl+R` to search history | Faster than arrow keys |
+| Pipe files: `cat file \| claude -p "review"` | Avoids copy errors |
+| Use `!` for quick shell commands | Adds output to context |
+| Use `@` for file paths | Autocomplete avoids typos |
+
+### Control & Safety
+
+| Practice | Why |
+|----------|-----|
+| Review diffs before approving | Catch unintended changes |
+| Use `Esc Esc` to rewind | Undo mistakes |
+| Use `--permission-mode plan` for complex tasks | Design before implementation |
+| Commit often | Small commits are easier to revert |
+
+### Context Awareness
+
+| Practice | Why |
+|----------|-----|
+| Check `/context` before large operations | Know available room |
+| Use `/clear` when starting fresh topics | Avoids stale context |
+| Add project notes via `#` | Persists across sessions |
